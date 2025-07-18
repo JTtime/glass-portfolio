@@ -8,9 +8,10 @@ export default function ProjectsPane() {
       <Typography variant="h4" fontWeight="bold" mb={4}>
         🚀 Featured Projects
       </Typography>
+      {projects && projects?.map(()=><>test</>)}
 
       <Stack spacing={4}>
-        {projects.map((proj, index) => (
+        {projects?.map((proj, index) => (
           <motion.div
             key={proj.title}
             initial={{ opacity: 0, y: 50 }}
