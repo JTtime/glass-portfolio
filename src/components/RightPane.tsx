@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ProjectsPane from "./ProjectCard";
 import AboutMePane from "./AboutMePane";
 import ContactMe from "./ContactMe";
+import DaughtersCorner from "./DaughtersCorner";
 
 
 const paneStyles = {
@@ -40,7 +41,7 @@ export default function RightPane({ selected, onClose }: Props) {
                 <ContactMe />
             </Box>;
       case "daughter":
-        return <Typography variant="h4">👧 Daughter’s Corner</Typography>;
+        return <DaughtersCorner/>;
       default:
         return null;
     }
