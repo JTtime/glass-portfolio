@@ -2,6 +2,10 @@ import { Box, Typography, IconButton } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import ProjectsPane from "./ProjectCard";
+import AboutMePane from "./AboutMePane";
+import ContactMe from "./ContactMe";
+
 
 const paneStyles = {
   position: "absolute",
@@ -26,13 +30,15 @@ export default function RightPane({ selected, onClose }: Props) {
   const renderContent = (): ReactNode => {
     switch (selected) {
       case "projects":
-        return <Typography variant="h4">✨ Projects go here</Typography>;
+        return <ProjectsPane/>;
       case "about":
-        return <Typography variant="h4">👨‍💻 About Me</Typography>;
+        return <AboutMePane />;
       case "interests":
         return <Typography variant="h4">🎯 Interests</Typography>;
       case "contact":
-        return <Typography variant="h4">📬 Contact Me</Typography>;
+        return <Box id="contact" sx={{ my: 12 }}>
+                <ContactMe />
+            </Box>;
       case "daughter":
         return <Typography variant="h4">👧 Daughter’s Corner</Typography>;
       default:
